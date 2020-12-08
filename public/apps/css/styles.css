@@ -1,0 +1,496 @@
+/* Authur: Idongesit Utong,
+  project: Personal Website,
+  Date: 10/10/2018.
+
+
+  */
+	body,
+	html {
+			width: 100%;
+			height: 100%;
+	}
+	
+	body,
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+	{
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: 700;
+	}
+	
+	p{
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-weight:700;
+	}
+	.error{
+		color:red;
+		
+		display:block;
+		padding-left:10px;
+	}
+/*----------nav starts------*/
+.navbar {
+  background-color: rgba(255, 255, 255, .90)
+}
+
+.navbar-toggle {
+  border: 5px solid rgba(252, 5, 5, 0.993); 
+  float: right;
+  margin-left: 15px;
+}
+
+#bot {
+  color:rgb(236, 18, 18);
+
+}
+
+.active {
+  color: #E52E2D; }
+
+.navbar-default .navbar-nav>li>a {
+  font-weight: bold;
+  color: #eb0d0dde;
+}
+
+/*----------nav ends------*/
+
+
+/*----------black ground image starts------*/
+
+.slides{   
+	
+	height: 100vh;
+	background-image:url(../images/download.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgb(28, 28, 28);
+	color:whitesmoke;
+  }
+  
+/*----------black ground image ends------*/
+
+/*---------- social icons, image starts------*/
+  
+  .social-avatar, .social-avatar img:first-of-type {
+  
+	  width: 250px ;
+	  height: 250px ;
+	}
+	.social-avatar {
+	
+	  display: block ;
+	  position: relative ;
+	  /*background: red ;*/
+	  padding: 0px ;
+	  margin-left: 25%;
+	  margin-top: 50%;
+	}
+	.social-avatar img:first-of-type {
+	
+	  border: 5px solid rgb(247, 245, 245) ;
+	  box-shadow: 0px 0px 15px #eee ;
+	  border-radius: 50% ;
+	  margin: 0px ;
+	}
+	.social-avatar figcaption:first-of-type a {
+	
+	  display: inline-block ;
+	  font-size: 1.4em ;
+	  font-family: Helvetica Neue, "comic sans ms" ;
+	  border: 3px solid white ;
+	  border-radius: 100px/100px ;
+	  background: #ff6600 ;
+	  color: white ;
+	  padding: 5px ;
+	  min-height: 40px ;
+	  min-width: 10px ;
+	  position: absolute;
+	}
+	.social-avatar figcaption:first-of-type a span {
+	
+	  display: none ;
+	  font-size: 0.9em ;
+	}
+	.social-avatar figcaption:first-of-type a:hover span {
+	
+	  display: inline;
+	  padding-left: 2px ;
+	}
+	.social-avatar figcaption:first-of-type a:nth-child(1) {
+	
+	  top: 0px ;
+	  left: 35px ;
+	}
+	.social-avatar figcaption:first-of-type a:nth-child(2) {
+	
+	  top: 45px ;
+	  left:-5px ;
+	}
+	.social-avatar figcaption:first-of-type a:nth-child(3) {
+	
+	  top: 100px ;
+	  left: -12px ;
+	}
+	.social-avatar figcaption:first-of-type a:nth-child(4) {
+	
+	  top: 155px ;
+	  left: -5px ;
+	}
+	.social-avatar figcaption:first-of-type a:nth-child(5) {
+	
+	  top: 200px ;
+	  left: 45px ;
+	}
+	.social-avatar figcaption:first-of-type a.s-facebook {
+	
+	  background: #3b5998 ;
+	}
+	.social-avatar figcaption:first-of-type a.s-twitter {
+	
+	  background: #4099FF ;
+	}
+	.social-avatar figcaption:first-of-type a.s-github {
+	
+	  background: #171515 ;
+	}
+	.social-avatar figcaption:first-of-type a.s-instagram {
+	
+	  background: #fd6704 ;
+	}
+	.social-avatar figcaption:first-of-type a.s-freecodecamp {
+	
+	  background: rgb(4, 128, 0) ;
+	}
+	
+	.social-profile {
+	
+	  display: inline-block; 
+	  margin: auto; 
+	}
+	
+	.project-thumb:hover {
+	
+	  box-shadow: 0px 0px 7px #f60;
+	} 
+	.project-thumb:hover figcaption {
+	
+	  text-shadow: 0px 0px 3px #f60;
+	  border: 1px solid #f60 ;
+	} 
+	.project-thumb figcaption {
+	
+	  font-size: 0.5em ;
+	  color: white ;
+	  text-shadow: 0px 0px 3px blue;
+	  margin-top: -3px ;
+	  padding: 3px ;
+	} 
+	.project-thumb img:first-of-type {
+	
+	  height: 5em ;
+	} 
+	.project-thumb legend {
+	
+	  font-size: 0.4em ;
+	  background: rgba(0, 0, 0, 0.7) ;
+	  position: absolute;
+	  top: 0px ;
+	  width: 100% ;
+	  height: 70% ;
+	  color: white;
+	  overflow: hidden ;
+	  display: none ;
+	}
+	.project-thumb:hover legend {
+	
+	  display: block;
+	}
+	.project-thumb legend i {
+	
+	  font-size: 3em ;
+	  display: inline-block;
+	  padding-bottom: 0.3em ;
+	}
+	
+	
+#dowllllln {
+  position: absolute;
+  opacity: 0.20;
+  left: 50%;
+  bottom: 10%;
+  cursor: pointer;
+}
+
+
+/*----------social icons, image ends------*/
+  
+	/*----------About section------*/
+
+	
+	#about {
+		background: #d2d9e023; 
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+	
+	#about .desc {
+		font-weight: 400;
+		color: rgba(0, 0, 0, 0.87);
+	}
+	
+	.icon-me {
+		text-align: center;
+		font-size: 5em;
+		color: rgba(200, 100, 100, 0.7);
+		padding-top: 20px;
+		padding-bottom: 25px;
+		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+	}
+	
+	.icon-contact {
+		text-align: center;
+		font-size: 7.5em;
+		color: rgba(152, 110, 110, 0.4);
+		padding-top: 10px;
+		padding-bottom: 15px;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+	}
+	
+	.icon-contact a {
+		color: rgba(152, 110, 110, 0.4) !important;
+	}
+
+	
+	.line {
+		height: 3px;
+		width: 100px;
+		position: relative;
+		top: -12px;
+		display: inline-block;
+		background-color: #999;
+	}
+	
+	
+	.section-title {
+		font-family: 'lato', sans-serif;
+		font-size: 3em;
+		font-weight: 800;
+		font-style: italic;
+		text-align: center;
+		padding-top: 0px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	/*----------About section------*/
+
+	/*----------Skill section------*/
+	.skills-heading {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	/*---------Skills End-------*/
+
+	/***********************************SCROLL BAR STYLES***********************************/
+	/* width */
+	::-webkit-scrollbar {
+		width: 5px; }
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #a3a3a3;
+		border-radius: 10px; }
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #E52E2D; }
+	
+
+	/*---------Services-------*/	
+	.accent-text {
+		font-family: "Dancing Script", cursive;
+		color: #E52E2D; }
+	
+	#services {
+		background: #d2d9e023; }
+		
+	
+	.service-block {
+		padding: 20px; }
+		.service-block .icon {
+			color: #E52E2D;
+			font-size: 50px;
+			padding-left: 130px;
+			opacity: 1;
+			-webkit-transform: translateY(-20px);
+			-ms-transform: translateY(-20px);
+			transform: translateY(-20px);
+			-webkit-transition: all .3s ease-out;
+			-o-transition: all .3s ease-out;
+			transition: all .3s ease-out; }
+	.ho{
+		text-align: center;
+		font-size: 23px
+	}
+	
+	.hb:nth-child(1), .hb:nth-child(2), .hb:nth-child(3) {
+		border-bottom: 1px #a3a3a3 solid; }
+	
+	@media screen and (max-width: 991px) {
+		.hb:nth-child(-n+4) {
+			border-bottom: 1px #a3a3a3 solid; } }
+	
+	@media screen and (max-width: 768px) {
+		.hb:nth-child(5) {
+			border-bottom: 1px #a3a3a3 solid; } }
+	
+	.vb:nth-child(1), .vb:nth-child(2), .vb:nth-child(4), .vb:nth-child(5) {
+		border-right: 1px #a3a3a3 solid; }
+	
+	@media screen and (max-width: 991px) {
+		.vb:nth-child(1), .vb:nth-child(2), .vb:nth-child(4), .vb:nth-child(5) {
+			border-right: none; }
+		.vb:nth-child(2n+1) {
+			border-right: 1px #a3a3a3 solid; } }
+	
+	@media screen and (max-width: 768px) {
+		.vb:nth-child(-n+6) {
+			border-right: none; } }
+	
+	/***********************************PORTFOLIO STYLES***********************************/
+
+/*--- PORTFOLIO ---*/
+.content-section .thumbnail { 
+	position: relative; overflow: hidden; cursor: pointer;
+ }
+.content-section .thumbnail * { 
+	transition: all .25s; 
+}
+.content-section .thumbnail h4 { 
+	font-size: 19px; font-weight: 400;
+ }
+.content-section .thumbnail p {
+	 line-height: 24px; 
+	}
+.content-section .thumbnail:hover h4, .content-section .thumbnail:hover p {
+	 color: #AFAFAF;
+	 }
+.content-section .thumbnail:hover img {
+	 opacity: 0.25; 
+	 }
+.content-section .thumbnail:after {
+font-family: 'FontAwesome'; 
+content: '\f121'; 
+color: #FFF; 
+font-size: 48px;
+line-height: 80px;
+top: 70%;
+position: absolute; 
+text-align: center;
+display: inline-block;
+width: 100%;
+transition: all .35s;
+opacity: 0;
+width: 86px;
+height: 86px;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+border-radius: 50%;
+background: transparent;
+border:3px solid transparent;
+								 }
+.content-section .thumbnail:hover:after { 
+top: 25%; 
+opacity: 1;
+color: #FFFFFF;
+background: #f52b2b;
+border:3px solid #FFFFFF; 
+	}
+
+	/***********************************CONTACT STYLES***********************************/
+#contact{
+	s: 70vh;
+	background-image:url(../images/download.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgb(12, 11, 11);
+	color:whitesmoke;
+	}
+#cont{
+	background-color: #00000000;
+	color: whitesmoke;
+}
+#make{
+	color:white;
+}
+	
+	/***********************************FOOTER STYLES***********************************/
+	
+ 	footer.nb-footer {
+		background:#070611;
+		border-top: 4px solid #070611; }
+		footer.nb-footer .about {
+		margin: 0 auto;
+		margin-top: 40px;
+		max-width: 1170px;
+		text-align: center; }
+		footer.nb-footer .about p {
+		font-size: 13px;
+		color: #999;
+		margin-top: 30px; }
+		footer.nb-footer .about .social-media {
+		margin-top: 15px; }
+		footer.nb-footer .about .social-media ul li a {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+		border-radius: 50%;
+		font-size: 26px;
+		color: #fdfdfd;
+		border: 1px solid rgba(255, 255, 255, 0.3); }
+		footer.nb-footer .about .social-media ul li a:hover {
+		background: #fcfcfc;
+		color: rgb(0, 0, 0);
+		border-color: #f7f6f3; }
+		footer.nb-footer .footer-info-single {
+		margin-top: 30px; }
+		footer.nb-footer .footer-info-single .title {
+		color: #aaa;
+		text-transform: uppercase;
+		font-size: 16px;
+		border-left: 4px solid #b78c33;
+		padding-left: 5px; }
+		footer.nb-footer .footer-info-single ul li a {
+		display: block;
+		color: #aaa;
+		padding: 2px 0; }
+		footer.nb-footer .footer-info-single ul li a:hover {
+		color: #b78c33; }
+		footer.nb-footer .footer-info-single p {
+		font-size: 13px;
+		line-height: 20px;
+		color: #aaa; }
+		footer.nb-footer .copyright {
+		margin-top: 15px;
+		background: rgb(0, 0, 0);
+		padding: 7px 0;
+		color: #999; }
+		footer.nb-footer .copyright p {
+		margin: 0;
+		text-align: center;
+		padding: 0; }
+
+	
+	
+	
+
+		/*---------Services End-------*/
