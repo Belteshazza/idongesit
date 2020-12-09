@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Session;
+use App\User;
+use App\Profile;
+
+
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class ProfilesController extends Controller
 {
@@ -11,10 +17,17 @@ class ProfilesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __contstruct () {
+        
+        $this->middleware('auth');
+     }
+
     public function index()
     {
-        //
-    }
+        return view('admin.profiles.index')->with('profile', Profile::all());
+                                        
+    } 
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +36,9 @@ class ProfilesController extends Controller
      */
     public function create()
     {
-        //
+        
+        Session::flash('success', 'Post successfully created.');
+        return view('admin.profiles.create');
     }
 
     /**
@@ -32,9 +47,31 @@ class ProfilesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $data = request()->validate([
+            'title' => 'required',
+            'caption' => 'required',
+            'image' => ['required', 'image'],
+            'image2' => ['required', 'image'],
+        ]);
+ 
+ 
+        $imagePath = request('image')->store('uploads', 'public');
+        $imagePath2 = request('image2')->store('uploads', 'public');
+ 
+        auth()->user()->profiles()->create([
+            
+             'title' => $data['title'],
+             'caption' => $data['caption'], 
+             'image' => $imagePath,
+             'image2' => $imagePath2,
+        ]);
+ 
+        Session::flash('success', 'Profile successfully created.');
+
+        return redirect()->route('profiles.index');
+ 
     }
 
     /**
@@ -55,8 +92,11 @@ class ProfilesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
+
     {
-        //
+
+        $profile = Profile::find($id);
+        return view('admin.profiles.edit')->with('profile', $profile);
     }
 
     /**
@@ -68,7 +108,52 @@ class ProfilesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $profile = Profile::find($id);
+
+         $data = request()->validate([
+             'title' => 'required',
+             'caption' => 'required'
+         ]);
+
+       
+
+         if (request('image')) {
+            $imagePath = request('image')->store('profile', 'public');
+
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+            $image->save();
+
+            $imageArray = ['image' => $imagePath];
+        }
+
+        $profile->update(array_merge(
+            $data,
+            $imageArray ?? []
+        ));
+
+        if (request('image2')) {
+            $imagePath = request('image2')->store('profile', 'public');
+
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+            $image->save();
+
+            $imageArray = ['image2' => $imagePath];
+        }
+
+        $profile->update(array_merge(
+            $data,
+            $imageArray ?? []
+        ));
+
+        $profile->title = $request->title;
+        $profile->caption = $request->caption;
+
+
+        $profile->save();
+
+        Session::flash('success', 'Profile successfully updated.');
+
+        return redirect()->route('profiles.index');
     }
 
     /**
@@ -79,6 +164,14 @@ class ProfilesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $profile = Profile::find($id);
+        
+
+        $profile->delete();
+
+        Session::flash('success', 'Profile successfully deleted.');
+
+        return redirect()->route('profiles.index');
     }
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
