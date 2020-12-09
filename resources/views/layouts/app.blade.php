@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -9,15 +9,15 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 <body>
     <div id="app">
@@ -40,12 +40,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -54,7 +51,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -64,7 +61,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
@@ -75,9 +72,81 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-</body>
-</html>
+        <div class="container">
+            <div class="row">
+                @if(Auth::check())
+
+                @if(Auth::user()->admin)
+
+                <div class="col-2">
+                    <main class="py-4">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{ route ('home') }}">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{ route ('post.create') }}">create Portfolio</a>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{ route ('post.index') }}">View Portfolio</a>
+                        </li>
+                    </ul>
+
+                   
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{ route ('settings') }}">View Settings</a>
+                        </li>
+                    </ul>
+                    
+                    
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{ route ('profiles.create') }}">Create Profile</a>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{ route ('profiles.index') }}">View profile</a>
+                        </li>
+                    </ul>
+                    @endif
+                </main>
+                </div>
+
+                @endif
+                <div class="col">
+                    <main class="py-4">
+                        @yield('content')
+                    </main>
+                </div>
+            </div>
+
+            <!-- Scripts -->
+            <script src="{{ asset('js/app.js') }}"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+        
+            <script>
+                
+                @if(Session::has('success'))
+
+                    toastr.success("{{ Session::get('success') }}")
+                @endif 
+
+            </script>
+
+            
+
+        </body>
+        </html>
+ 
