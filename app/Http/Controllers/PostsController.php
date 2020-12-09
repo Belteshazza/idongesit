@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfilesController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.

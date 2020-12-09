@@ -5,11 +5,11 @@ use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controller\SettingsController;
 
+Route::get("/contact-us", [ContactController::class, 'getContact']);
 
-Route::get("/contact-us", [ContactController::class, 'Contact']);
-
-Route::post("/contact-us", [ContactController::class, 'Contact']);
+Route::post("/contact-us", [ContactController::class, 'saveContact']);
 
 Route::get("/", [FrontEndController::class, 'index']);
 
@@ -37,5 +37,3 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
 
 });
-
-
