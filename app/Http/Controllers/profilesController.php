@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Session;
-use App\User;
-use App\Profile;
+use App\Models\User;
+use App\Models\Profile;
 
 
 use Illuminate\Http\Request;

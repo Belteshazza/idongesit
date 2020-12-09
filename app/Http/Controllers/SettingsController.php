@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Session;
-use App\Setting;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class SettingsController extends Controller

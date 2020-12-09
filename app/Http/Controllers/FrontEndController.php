@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Profile;
-use App\FrontEnd;
-use App\Setting;
-use App\User;
-use App\Post;
+use App\Models\Profile;
+use App\Models\FrontEnd;
+use App\Models\Setting;
+use App\Models\User;
+use App\Models\Post;
 
 use Illuminate\Http\Request;
 

@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Session;
-use App\User;
-use App\Profile;
+use App\Models\Settings;
+use App\Models\User;
+use App\Models\Post;
 
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
-class ProfilesController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +26,7 @@ class ProfilesController extends Controller
 
     public function index()
     {
-        return view('admin.profiles.index')->with('profile', Profile::all());
+        return view('admin.posts.index')->with('posts', Post::all());
                                         
     } 
 
@@ -38,7 +39,7 @@ class ProfilesController extends Controller
     {
         
         Session::flash('success', 'Post successfully created.');
-        return view('admin.profiles.create');
+        return view('admin.posts.create');
     }
 
     /**
@@ -51,26 +52,25 @@ class ProfilesController extends Controller
     {
         $data = request()->validate([
             'title' => 'required',
+            'url' => ['required', 'url'],
             'caption' => 'required',
             'image' => ['required', 'image'],
-            'image2' => ['required', 'image'],
         ]);
  
  
         $imagePath = request('image')->store('uploads', 'public');
-        $imagePath2 = request('image2')->store('uploads', 'public');
  
-        auth()->user()->profiles()->create([
-            
+        auth()->user()->posts()->create([
+             
              'title' => $data['title'],
+             'url' => $data['url'],
              'caption' => $data['caption'], 
              'image' => $imagePath,
-             'image2' => $imagePath2,
         ]);
  
-        Session::flash('success', 'Profile successfully created.');
+        Session::flash('success', 'Post successfully created.');
 
-        return redirect()->route('profiles.index');
+        return redirect()->route('post.index');
  
     }
 
@@ -80,7 +80,7 @@ class ProfilesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
     }
@@ -95,8 +95,8 @@ class ProfilesController extends Controller
 
     {
 
-        $profile = Profile::find($id);
-        return view('admin.profiles.edit')->with('profile', $profile);
+        $post = Post::find($id);
+        return view('admin.posts.edit')->with('post', $post);
     }
 
     /**
@@ -108,52 +108,41 @@ class ProfilesController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $profile = Profile::find($id);
+         $post = Post::find($id);
 
          $data = request()->validate([
              'title' => 'required',
+             'url' => 'required',
              'caption' => 'required'
          ]);
 
        
 
          if (request('image')) {
-            $imagePath = request('image')->store('profile', 'public');
+            $imagePath = request('image')->store('post', 'public');
 
-            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+            $image = Image::make(public_path("storage/{$imagePath}"));
             $image->save();
 
             $imageArray = ['image' => $imagePath];
         }
 
-        $profile->update(array_merge(
+        $post->update(array_merge(
             $data,
             $imageArray ?? []
         ));
 
-        if (request('image2')) {
-            $imagePath = request('image2')->store('profile', 'public');
 
-            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
-            $image->save();
-
-            $imageArray = ['image2' => $imagePath];
-        }
-
-        $profile->update(array_merge(
-            $data,
-            $imageArray ?? []
-        ));
-
-        $profile->title = $request->title;
-        $profile->caption = $request->caption;
+        $post->title = $request->title;
+        $post->url = $request->url;
+        $post->caption = $request->caption;
 
 
-        $profile->save();
+        $post->save();
 
-        Session::flash('success', 'Profile successfully updated.');
+        Session::flash('success', 'Post successfully updated.');
 
-        return redirect()->route('profiles.index');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -164,14 +153,12 @@ class ProfilesController extends Controller
      */
     public function destroy($id)
     {
-        $profile = Profile::find($id);
-        
+        $post = Post::find($id);
 
-        $profile->delete();
+        $post->delete();
 
-        Session::flash('success', 'Profile successfully deleted.');
-
-        return redirect()->route('profiles.index');
+        Session::flash('success', 'Post successfully deleted.');
+        return redirect()->back();
     }
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
