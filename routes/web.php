@@ -1,24 +1,41 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FrontEndController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/contact-us", [ContactController::class, 'Contact']);
+
+Route::post("/contact-us", [ContactController::class, 'Contact']);
+
+Route::get("/", [FrontEndController::class, 'index']);
+
+Route::get("/post/{post}", [FrontEndController::class, 'show']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::Resource("profiles", profilesController::class);
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+
+    Route::get('/home', [HomeController::class, 'index']);
+     
+
+    Route::get("/settings", [SettingsController::class, 'index']);
+
+    Route::post("/settings/update", [SettingsController::class, 'update']);
+
+    Route::resource('post', [PostController::class]);
+    
+    Route::resource('profiles', [ProfilesController::class]);
+
+
+   
+
+
+});
+
+
