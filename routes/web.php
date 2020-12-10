@@ -13,7 +13,7 @@ Route::post("/contact-us", [ContactController::class, 'saveContact']);
 
 Route::get("/", [FrontEndController::class, 'index']);
 
-Route::get("/post/{post}", [FrontEndController::class, 'show']);
+Route::get("/posts/{post}", [FrontEndController::class, 'show']);
 
 Auth::routes();
 
