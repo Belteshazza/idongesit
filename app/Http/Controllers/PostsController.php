@@ -142,7 +142,7 @@ class PostsController extends Controller
 
         Session::flash('success', 'Post successfully updated.');
 
-        return redirect()->route('post.index');
+        return redirect()->route('posts.index');
     }
 
     /**
