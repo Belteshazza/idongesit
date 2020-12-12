@@ -5,7 +5,8 @@ use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontEndController;
-use App\Http\Controller\SettingsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SettingsController;
 
 Route::get("/contact-us", [ContactController::class, 'getContact']);
 
@@ -28,7 +29,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     Route::post("/settings/update", [SettingsController::class, 'update']);
 
-    Route::resource('post', '\App\Http\Controllers\PostsController::class' );
+    Route::resource('posts', '\App\Http\Controllers\PostsController::class' );
     
     Route::resource('profiles', '\App\Http\Controllers\ProfilesController::class');
 
