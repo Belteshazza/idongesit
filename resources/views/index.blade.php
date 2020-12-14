@@ -295,8 +295,8 @@
         @foreach($posts as $post)
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
-             <a href="{{ route('show', [$posts->id]) }}">
-            <img src="/idee/public/storage/{{ $post->image }}" class="img-responsive" style="width:150px" alt="Sliced WhatsApp web at first attempt">
+             <a href="{{ route('posts.show', ['post' => $post->id ] ) }}">
+            <img src="/developer/public/storage/{{ $post->image }}" class="img-responsive" style="width:150px" alt="Sliced WhatsApp web at first attempt">
             <div class="caption">
               <p class="text-center">{{ $post->title }}</p>
              
