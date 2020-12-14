@@ -29,9 +29,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     Route::post("/settings/update", [SettingsController::class, 'update']);
 
-    Route::resource('posts', '\App\Http\Controllers\PostsController::class' );
+    Route::resource('posts','\App\Http\Controllers\PostsController::class' );
     
-    Route::resource('profiles', '\App\Http\Controllers\ProfilesController::class');
+    Route::resource('profiles','\App\Http\Controllers\ProfilesController::class');
 
 
    
