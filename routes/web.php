@@ -22,12 +22,12 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
-    Route::get('/home', [HomeController::class, 'index']);
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
      
 
-    Route::get("/settings", [SettingsController::class, 'index']);
+    Route::get("/settings", [SettingsController::class, 'index'])->name('settings');
 
-    Route::post("/settings/update", [SettingsController::class, 'update']);
+    Route::post("/settings/update", [SettingsController::class, 'update'])->name('setting.update');
 
     Route::resource('posts', PostsController::class);
     

@@ -36,19 +36,19 @@
                             @foreach($posts as $post)
                               <tr>
                                      
-                                    <td> <img src="/idee/public/storage/{{ $post->image }}" style="width:100px">  </td>
+                                    <td> <img src="/developer/public/storage/{{ $post->image }}" style="width:100px">  </td>
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->url }}</td>
                                     <td> {{ $post->caption }}</td>
                                     
                                     <td>
                                         
-                                        <a href="{{ route('post.edit', ['id' => $post->id ]) }}" class="btn btn-xs btn-info">Edit</a>
+                                        <a href="{{ route('posts.edit', ['id' => $post->id ]) }}" class="btn btn-xs btn-info">Edit</a>
                                     </td>
                                     <td>
                                         
                                             
-                                            <a href="{{ route('post.destroy', ['post' => $post->id ]) }}" class="btn btn-xs btn-danger" >Delete</a>
+                                            <a href="{{ route('posts.destroy', ['post' => $post->id ]) }}" class="btn btn-xs btn-danger" >Delete</a>
                                      
                                     </td>
                                 </tr>

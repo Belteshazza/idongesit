@@ -87,13 +87,13 @@
                     </ul>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{{ route ('post.create') }}">create Portfolio</a>
+                            <a href="{{ route ('posts.create') }}">create Portfolio</a>
                         </li>
                     </ul>
 
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{{ route ('post.index') }}">View Portfolio</a>
+                            <a href="{{ route ('posts.index') }}">View Portfolio</a>
                         </li>
                     </ul>
 
