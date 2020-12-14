@@ -47,9 +47,14 @@
                                     </td>
                                     <td>
                                         
-                                            
-                                            <a href="{{ route('posts.destroy', ['post' => $post->id ]) }}" class="btn btn-xs btn-danger" >Delete</a>
-                                     
+                                        <form action="{{ route('posts.destroy', ['post' => $post->id ]) }}" method="post">
+
+                                            @csrf
+                                            @method('DELETE')
+                                        
+                                            <button class="btn btn-xs btn-danger" type="submit">Delete</button>
+                                        
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

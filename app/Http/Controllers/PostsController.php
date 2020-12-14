@@ -39,7 +39,7 @@ class PostsController extends Controller
     public function create()
     {
         
-        Session::flash('success', 'Post successfully created.');
+        
         return view('admin.posts.create');
     }
 

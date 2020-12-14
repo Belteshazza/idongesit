@@ -17,7 +17,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{{ route('profiles.update', ['id' => $profile->id] ) }} " enctype="multipart/form-data" method="post">
+            <form action="{{ route('profiles.update', ['profile' => $profile->id] ) }} " enctype="multipart/form-data" method="post">
                 @csrf
                 @method('PUT')
 

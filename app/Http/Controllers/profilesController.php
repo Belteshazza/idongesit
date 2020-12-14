@@ -37,7 +37,7 @@ class ProfilesController extends Controller
     public function create()
     {
         
-        Session::flash('success', 'Post successfully created.');
+        
         return view('admin.profiles.create');
     }
 
