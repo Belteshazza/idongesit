@@ -10,7 +10,7 @@
 
         <div class="col-6">
             <a href="{{ $post->url }}">
-            <img src="/idee/public/storage/{{ $post->image }}" class=" img-fluid " style="box-shadow:0 0 4px 9px rgb(177, 172, 172);  ">
+            <img src="/developer/public/storage/{{ $post->image }}" class=" img-fluid " style="box-shadow:0 0 4px 9px rgb(177, 172, 172);  ">
         </a>
 
         
