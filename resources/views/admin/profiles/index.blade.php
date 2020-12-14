@@ -44,7 +44,7 @@
                                     
                                     <td>
                                         
-                                        <a href="{{ route('profiles.edit', ['id' => $profile->id ]) }}" class="btn btn-xs btn-info">Edit</a>
+                                        <a href="{{ route('profiles.edit', ['profile' => $profile->id ]) }}" class="btn btn-xs btn-info">Edit</a>
                                     </td>
                                     <td>
                                         <form action="{{ route('profiles.destroy', ['profile' => $profile->id ]) }}" method="post">
