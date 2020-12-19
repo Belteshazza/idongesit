@@ -5,7 +5,7 @@
 
 
 <div style='box-shadow:0 0 4px 9px black;'>
-    <h2> Hello, Idongesit,</h2>
+    <h2> Hello, Wealthy_Developer,</h2>
      You received an email from : {{ $name }}
     Here are the details:
     
