@@ -19,7 +19,7 @@ class FrontEndController extends Controller
                             ->with('first_profiles', Profile::orderBy('created_at', 'desc')->first());
     }
 
-    public function show(\App\Post $post)
+    public function show(\App\Models\Post $post)
     {
         return view('show', compact('post'));
     }
