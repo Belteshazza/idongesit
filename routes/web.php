@@ -12,9 +12,9 @@ Route::get("/contact-us", [ContactController::class, 'getContact']);
 
 Route::post("/contact-us", [ContactController::class, 'saveContact']);
 
-Route::get("/", [FrontEndController::class, 'index']);
+Route::get("/", [FrontEndController::class, 'index'])->name('post.index');
 
-Route::get("/posts/{post}", [FrontEndController::class, 'show']);
+Route::get("/posts/{post}", [FrontEndController::class, 'show'])->name('show');
 
 Auth::routes();
 
