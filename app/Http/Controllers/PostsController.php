@@ -123,6 +123,14 @@ class PostsController extends Controller
             $imagePath = request('image')->store('post', 'public');
 
             $image = Image::make(public_path("storage/{$imagePath}"));
+
+            // the below code works online in shared hosting without errors 
+           // $imagePath = request('image')->store('post', 'public');
+            
+           // $image = Image::make($request->file('image')->getRealPath());
+
+
+
             $image->save();
 
             $imageArray = ['image' => $imagePath];
