@@ -121,6 +121,12 @@ class ProfilesController extends Controller
             $imagePath = request('image')->store('profile', 'public');
 
             $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+
+            // the below code works online in shared hosting without errors 
+           // $imagePath = request('image')->store('post', 'public');
+            
+           // $image = Image::make($request->file('image')->getRealPath());
+           
             $image->save();
 
             $imageArray = ['image' => $imagePath];
