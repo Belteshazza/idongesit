@@ -19,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Idongesit - Freelance Web developer in Abuja, Nigeria </title>
+    <title>Wealthy Developer - Freelance Web developer in Abuja, Nigeria </title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" type="text/css" href="apps/bootstrap/css/bootstrap.css">  
