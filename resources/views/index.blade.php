@@ -81,7 +81,7 @@
                    <a target="_blank" href="https://twitter.com/Styleid1" class="s-twitter"><i class="fa fa-twitter fa-fw"></i><span>Twitter </span></a>
                    <a target="_blank" href="https://github.com/wealthydeveloper" class="s-github"><i class="fa fa-github fa-fw"></i><span>Github </span></a>
                    <a target="_blank" href="https://www.instagram.com/wealthy_developer/" class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span>Instagram </span></a>
-                   <a target="_blank" href="https://ng.linkedin.com/in/idongesit-utong-186684169" class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>his linkedin </span></a>
+                   <a target="_blank" href="https://ng.linkedin.com/in/idongesit-utong-186684169" class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>LinkedIn </span></a>
                 </figcaption>
                </figure>
             </div>
