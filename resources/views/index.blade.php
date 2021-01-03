@@ -78,7 +78,7 @@
                <figure class="social-avatar">
                 <img src="/developer/public/storage/{{ $first_profiles->image }}"  class="img-responsive img-circle" alt="profile-picture"/>
                 <figcaption>
-                   <a target="_blank" href="https://twitter.com/Styleid1" class="s-twitter"><i class="fa fa-twitter fa-fw"></i><span> his twitter </span></a>
+                   <a target="_blank" href="https://twitter.com/Styleid1" class="s-twitter"><i class="fa fa-twitter fa-fw"></i><span>Twitter </span></a>
                    <a target="_blank" href="https://github.com/wealthydeveloper" class="s-github"><i class="fa fa-github fa-fw"></i><span> his github </span></a>
                    <a target="_blank" href="https://www.instagram.com/wealthy_developer/" class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span> his instagram </span></a>
                    <a target="_blank" href="https://ng.linkedin.com/in/idongesit-utong-186684169" class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>his linkedin </span></a>
