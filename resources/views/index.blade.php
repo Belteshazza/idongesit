@@ -446,10 +446,10 @@
 	
 	<div class="social-media">
 		<ul class="list-inline">
+      <li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i class="fa fa-linkedin"></i></a></li>
 			<li><a href="https://twitter.com/Styleid1" title=""><i class="fa fa-twitter"></i></a></li>
 			<li><a href="https://github.com/wealthydeveloper" title=""><i class="fa fa-github"></i></a></li>
 			<li><a href="https://www.instagram.com/wealthy_developer/" title=""><i class="fa fa-instagram"></i></a></li>
-			<li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i class="fa fa-linkedin"></i></a></li>
 		</ul>
 	</div>
 	</div>
