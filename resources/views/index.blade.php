@@ -463,7 +463,7 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-12">
-<p>Copyright  &#169 <?php echo date("Y");?></p>
+<p>&#169 <?php echo date("Y");?></p>
 </div>
 
 </div>
