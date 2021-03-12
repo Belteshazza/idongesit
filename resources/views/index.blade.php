@@ -52,7 +52,7 @@
                <span class="icon-bar"></span>
                
 						</button>
-				  <a class="navbar-brand animated flip" id="bot" href="#top"> <img src="/storage/{{ $first_profiles->image2 }}"  class="img-responsive" width= 35px alt="profile-picture"/></a>
+				  <a class="navbar-brand animated flip" id="bot" href="#top"> <img src="/developer/public/storage/{{ $first_profiles->image2 }}"  class="img-responsive" width= 35px alt="profile-picture"/></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">						 
