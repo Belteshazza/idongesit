@@ -345,7 +345,7 @@
                                 <p><b>info@ide.com.ng</b></p>
 
                                 <h4 class="section-heading"> <span class="icon"><i class="fa fa-mobile colored fa-3x"></i></span> </h4>
-                                <p><b></b></p>
+                                <p><b>+2348137489567</b></p>
 
                                 
                                 <h4 class="section-heading"> <span  class="icon"><i style="color: #00ff00;" class="fa fa-whatsapp fa-3x"></i></span> </h4>
