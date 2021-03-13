@@ -57,7 +57,7 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">						 
             <li><a href="#about"><span class="fa fa-info-circle"></span> About</a></li>
-            <li><a href="#skills"><span class="fa fa-cogs"></span> Tools</a></li>
+            <li><a href="#skills"><span class="fa fa-cogs"></span>Skills</a></li>
             <li><a href="#services"><span class="fa fa-smile-o"></span> MyServices</a></li>
 					  <li><a href="#portfolio"><span class="fa fa-book"></span> Portfolio</a></li> 
 					  <li><a href="#contact"><span class="fa fa-envelope"></span> Contact</a></li> 
