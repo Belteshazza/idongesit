@@ -197,7 +197,7 @@
               <div class="icon-container">
                 <i class="devicon-bootstrap-plain colored fa-5x"></i>
               </div>
-              <h4 class="skills-heading">BootStrap</h4>
+              <h4 class="skills-heading">BootStrap4</h4>
             </div>
             
 
