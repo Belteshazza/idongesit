@@ -189,7 +189,7 @@
           <div class="icon-container">
           <i class="devicon-laravel-plain colored fa-5x"></i>
           </div>
-          <h4 class="skills-heading">Laravel</h4>
+          <h4 class="skills-heading">Laravel8</h4>
         </div>
 
         
