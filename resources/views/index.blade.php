@@ -147,7 +147,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">TOOLS</h2>
+          <h2 class="section-heading">SkILLS</h2>
           <hr>
         </div>
       </div>
