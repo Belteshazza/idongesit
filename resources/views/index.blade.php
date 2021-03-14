@@ -155,7 +155,7 @@
       <div class="row text-center">
         <div class="col-md-3">
           <div class="icon-container">
-            <i class="devicon-git-plain wordmark colored fa-5x"></i>
+            <i class="devicon-github-plain wordmark colored fa-5x"></i>
           </div>
           <h4 class="skills-heading">Git</h4>
         </div>
