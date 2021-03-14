@@ -157,7 +157,7 @@
           <div class="icon-container">
             <i class="devicon-github-plain wordmark colored fa-5x"></i>
           </div>
-          <h4 class="skills-heading">Git</h4>
+          <h4 class="skills-heading">Github</h4>
         </div>
 
         <div class="col-md-3">
