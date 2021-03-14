@@ -214,7 +214,7 @@
           <div class="icon-container">
           <i class="devicon-mysql-plain colored fa-5x"></i> 
           </div>
-          <h4 class="skills-heading">Html5</h4>
+          <h4 class="skills-heading">Mysql</h4>
         </div>
 
       </div>
