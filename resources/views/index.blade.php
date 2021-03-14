@@ -212,7 +212,7 @@
 
         <div class="col-md-3">
           <div class="icon-container">
-          <i class="devicon-html5-plain colored fa-5x"></i> 
+          <i class="devicon-mysql-plain colored fa-5x"></i> 
           </div>
           <h4 class="skills-heading">Html5</h4>
         </div>
