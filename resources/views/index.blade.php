@@ -256,7 +256,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
                 <div class="service-block">
                     <span class="icon"><i class="fa fa-shopping-cart"></i></span>
-                    <h4 class="ho">e-commerce  site</h4>
+                    <h4 class="ho">e-commerce website</h4>
                     <p>{{ $settings->ecom }}</p>
                 </div>
             </div>
