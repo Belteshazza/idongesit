@@ -21,7 +21,7 @@
 
             <div class="text-center" style="padding:25px max-width:150px">{{ $post->caption }}</div> 
          
-            <div class="text-center"><a href="{{ $post->url }}">Click me to view the Above website</a></div>
+            <div class="text-center"><a href="{{ $post->url }}">Click to view</a></div>
          
             </div>
         
