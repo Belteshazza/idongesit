@@ -323,7 +323,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Contact</h1>
-                <h3 class="section-subheading" style="text-align:center" id="make">Let's have a chat and build something worldclass website.</h3>
+                <h3 class="section-subheading" style="text-align:center" id="make">Let's have a chat and build a worldclass website.</h3>
             </div>
         </div>
         <div class="row">
