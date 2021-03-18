@@ -5,7 +5,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 card-body">
         </div>
 
         <div class="col-6">
