@@ -36,11 +36,11 @@
                             @foreach($profile as $profile)
                               <tr>
                                      
-                                    <td> <img src="/developer/public/storage/{{ $profile->image }}" style="width:100px">  </td>
+                                    <td> <img src="/storage/{{ $profile->image }}" style="width:100px">  </td>
                                     <td>{{ $profile->title }}</td>
                                     <td> {{ $profile->caption }}</td>
 
-                                    <td> <img src="/developer/public/storage/{{ $profile->image2 }}" style="width:100px">  </td>
+                                    <td> <img src="/storage/{{ $profile->image2 }}" style="width:100px">  </td>
                                     
                                     <td>
                                         

@@ -16,7 +16,7 @@ class FrontEndController extends Controller
     {
         return view('index')->with('posts', Post::all())
                             ->with('settings', Setting::first())
-                            ->with('first_profiles', Profile::orderBy('created_at', 'desc')->first());
+                            ->with('first_profiles', Profile::orderBy('created_at', 'asc')->first());
     }
 
     public function show(\App\Models\Post $post)

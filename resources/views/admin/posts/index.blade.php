@@ -36,7 +36,7 @@
                             @foreach($posts as $post)
                               <tr>
                                      
-                                    <td> <img src="/developer/public/storage/{{ $post->image }}" style="width:100px">  </td>
+                                    <td> <img src="/storage/{{ $post->image }}" style="width:100px">  </td>
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->url }}</td>
                                     <td> {{ $post->caption }}</td>

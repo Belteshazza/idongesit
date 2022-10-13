@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Session;
-use App\Models\Settings;
+
 use App\Models\User;
 use App\Models\Post;
 
@@ -121,8 +121,10 @@ class PostsController extends Controller
 
          if (request('image')) {
             $imagePath = request('image')->store('post', 'public');
+            
+            $image = Image::make($request->file('image')->getRealPath())->fit(1000, 1000);
 
-            $image = Image::make(public_path("storage/{$imagePath}"));
+        
             $image->save();
 
             $imageArray = ['image' => $imagePath];

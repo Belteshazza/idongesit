@@ -10,7 +10,9 @@ use App\Http\Controllers\SettingsController;
 
 Route::get("/contact-us", [ContactController::class, 'getContact']);
 
-Route::post("/contact-us", [ContactController::class, 'saveContact']);
+Route::post("contact-us", [ContactController::class, 'saveContact'])->name('contact');
+
+Route::get('reload-captcha', [ContactController::class, 'reloadCaptcha']);
 
 Route::get("/", [FrontEndController::class, 'index'])->name('post.index');
 

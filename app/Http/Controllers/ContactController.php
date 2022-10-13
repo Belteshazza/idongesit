@@ -13,14 +13,15 @@ class ContactController extends Controller
         return view('contact_us'); 
       } 
  
-       public function saveContact(Request $request) { 
+    public function saveContact(Request $request) { 
  
          $this->validate($request, [
              'name' => 'required',
              'email' => ['required', 'email'],
              'subject' => 'required',
              'phone_number' => 'required',
-             'message' => 'required'
+             'message' => 'required',
+             'captcha' => 'required|captcha'
 
              
              ]);
@@ -45,10 +46,15 @@ class ContactController extends Controller
              ), function($message) use ($request)
                {
                   $message->from($request->email);
-                  $message->to('idongesitutong@gmail.com');
+                  $message->to('info@wealthydeveloper.com.ng');
                });
              
              return back()->with('success', 'Thank you for contacting us!');
      
          }
+
+    public function reloadCaptcha()
+       {
+         return response()->json(['captcha' => captcha_img()]);
+       }
 }

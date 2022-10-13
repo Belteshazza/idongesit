@@ -3,7 +3,7 @@
 namespace App\Models;
 use App\Models\Post;
 
-use App\Models\profile;
+use App\Models\Profile;
 
 
 
@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function posts()
     {
-        return $this->hasMany(Post::class)->orderBy('created_at', 'desc');
+        return $this->hasMany(Post::class);
     }
     
     public function profiles()
