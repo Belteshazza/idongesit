@@ -18,7 +18,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Wealthy Developer - Freelance Web developer in Abuja, Nigeria </title>
+    <title>Idongesit - Freelance Web developer in Abuja, Nigeria </title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" type="text/css" href="apps/bootstrap/css/bootstrap.css">
@@ -44,25 +44,25 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
 
-      <!-- Collapsable Navbar -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-
-        </button>
-        <a class="navbar-brand animated flip" id="bot" href="#top"><img src="/storage/{{ $first_profiles->image2 }}" class="img-responsive" width=35px alt="profile-picture" /></a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about"><span class="fa fa-info-circle"></span> About</a></li>
-          <li><a href="#skills"><span class="fa fa-cogs"></span> Skills</a></li>
-          <li><a href="#services"><span class="fa fa-smile-o"></span> MyServices</a></li>
-          <li><a href="#portfolio"><span class="fa fa-book"></span> Portfolio</a></li>
-          <li><a href="#contact"><span class="fa fa-envelope"></span> Contact</a></li>
-        </ul>
-      </div>
+  <!-- Collapsable Navbar -->
+  		  <div class="navbar-header">							
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               
+						</button>
+				  <a class="navbar-brand animated flip" id="bot" href="#top">Idongesit</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">						 
+            <li><a href="#about"><span class="fa fa-info-circle"></span> About</a></li>
+            <li><a href="#skills"><span class="fa fa-cogs"></span> Tools</a></li>
+            <li><a href="#services"><span class="fa fa-smile-o"></span> MyServices</a></li>
+					  <li><a href="#portfolio"><span class="fa fa-book"></span> Portfolio</a></li> 
+					  <li><a href="#contact"><span class="fa fa-envelope"></span> Contact</a></li> 
+					</ul>
+				</div>
     </div>
     <!-- /.container-fluid -->
   </nav>
@@ -72,25 +72,25 @@
     <div class="container-fluid slides">
       <div class="row">
         <div class="col-md-3"> </div>
-        <div class="col-md-6">
-
-          <div class="social-profile">
-            <figure class="social-avatar">
-              <img src="/storage/{{ $first_profiles->image }}" class="img-responsive img-circle" alt="profile-picture" />
-              <figcaption>
-                <a target="_blank" href="https://www.linkedin.com/in/idongesit-utong/" class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>linkedIn </span></a>
-                <a target="_blank" href="https://twitter.com/Styleid1" class="s-twitter"><i class="fa fa-twitter fa-fw"></i><span>Twitter </span></a>
-                <a target="_blank" href="https://github.com/wealthydeveloper" class="s-github"><i class="fa fa-github fa-fw"></i><span>Github </span></a>
-                <a target="_blank" href="https://www.instagram.com/wealthy_developer/" class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span>Instagram </span></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div style="ground-color:rgba(71, 51, 51, 0.0)">
-            <h2 class="intro-lead-in" style="padding-left:50px">{{ $first_profiles->title }}</h2>
-            <h3 class="intro-heading" style="padding-left:50px">
-              {{ $first_profiles->caption }}
-            </h3>
-          </div>
+        <div class="col-md-6"> 
+          
+            <div class="social-profile">
+               <figure class="social-avatar">
+                <img src="/developer/public/storage/{{ $first_profiles->image }}"  class="img-responsive img-circle" alt="profile-picture"/>
+                <figcaption>
+                   <a target="_blank" href="https://twitter.com/Styleid1" class="s-twitter"><i class="fa fa-twitter fa-fw"></i><span> his twitter </span></a>
+                   <a target="_blank" href="https://github.com/wealthydeveloper" class="s-github"><i class="fa fa-github fa-fw"></i><span> his github </span></a>
+                   <a target="_blank" href="https://www.instagram.com/wealthy_developer/" class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span> his instagram </span></a>
+                   <a target="_blank" href="https://ng.linkedin.com/in/idongesit-utong-186684169" class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>his linkedin </span></a>
+                </figcaption>
+               </figure>
+            </div>
+              <div style="ground-color:rgba(71, 51, 51, 0.0)">  
+                  <h2 class="intro-lead-in" style="padding-left:50px">{{ $first_profiles->title }}</h2>
+                  <h3 class="intro-heading" style="padding-left:50px">
+                    {{ $first_profiles->caption }}
+                  </h3>
+            </div>
           <div class="col-md-3"> </div>
         </div>
       </div>
@@ -147,7 +147,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">SKILLS</h2>
+          <h2 class="section-heading">TOOLS</h2>
           <hr>
         </div>
       </div>
@@ -155,9 +155,9 @@
       <div class="row text-center">
         <div class="col-md-3">
           <div class="icon-container">
-            <i class="devicon-github-plain colored fa-5x"></i>
+            <i class="devicon-git-plain wordmark colored fa-5x"></i>
           </div>
-          <h4 class="skills-heading">Github</h4>
+          <h4 class="skills-heading">Git</h4>
         </div>
 
         <div class="col-md-3">
@@ -189,17 +189,17 @@
           <div class="icon-container">
             <i class="devicon-laravel-plain colored fa-5x"></i>
           </div>
-          <h4 class="skills-heading">Laravel</h4>
+          <h4 class="skills-heading">Laravel8</h4>
         </div>
 
-
-        <div class="col-md-3">
-          <div class="icon-container">
-            <i class="devicon-bootstrap-plain colored fa-5x"></i>
-          </div>
-          <h4 class="skills-heading">BootStrap4</h4>
-        </div>
-
+        
+            <div class="col-md-3">
+              <div class="icon-container">
+                <i class="devicon-bootstrap-plain colored fa-5x"></i>
+              </div>
+              <h4 class="skills-heading">BootStrap</h4>
+            </div>
+            
 
         <div class="col-md-3">
           <div class="icon-container">
@@ -212,9 +212,9 @@
 
         <div class="col-md-3">
           <div class="icon-container">
-            <i class="devicon-mysql-plain colored fa-5x"></i>
+          <i class="devicon-html5-plain colored fa-5x"></i> 
           </div>
-          <h4 class="skills-heading">Mysql</h4>
+          <h4 class="skills-heading">Html5</h4>
         </div>
 
       </div>
@@ -226,57 +226,56 @@
   <!-- Service section -->
   <section id="servicess">
     <div class="container">
-      <div class="section-title">
-        <h1>My <span class="accent-text">Services</span></h1>
-      </div>
-
-      <div class="row center-xs center-sm center-md center-lg trigger">
-        <!--Row 1-->
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
-          <div class="service-block">
-            <span class="icon"><i class="fa fa-code"></i></span>
-            <h4 class="ho">Web Development</h4>
-            <p>{{ $settings->wdev }}</p>
-          </div>
+        <div class="section-title">
+            <h1>My <span class="accent-text">Services</span></h1>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
-          <div class="service-block">
-            <span class="icon"><i class="fa fa-laptop"></i></span>
-            <h4 class="ho">Web Design</h4>
-            <p>{{ $settings->wdesign }}</b></p>
-          </div>
+        
+        <div class="row center-xs center-sm center-md center-lg trigger"><!--Row 1-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
+                <div class="service-block">
+                    <span class="icon"><i class="fa fa-code"></i></span>
+                    <h4 class="ho">Web Development</h4>
+                    <p>{{ $settings->wdev }}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
+                <div class="service-block">
+                    <span class="icon"><i class="fa fa-laptop"></i></span>
+                    <h4 class="ho">Web Design</h4>
+                    <p>{{ $settings->wdesign }}</b></p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
+                <div class="service-block">
+                   <span class="icon"><i class="fa fa-mobile"></i></span>
+                    <h4 class="ho">Fully Responsive</h4>
+                    <p>{{ $settings->frespon }} </p>
+                </div>
+            </div>  
+        
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
+                <div class="service-block">
+                    <span class="icon"><i class="fa fa-shopping-cart"></i></span>
+                    <h4 class="ho">e-commerce  site</h4>
+                    <p>{{ $settings->ecom }}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
+                <div class="service-block">
+                    <span class="icon"><i class="fa fa-user-plus"></i></span>
+                    <h4 class="ho">Personal Website</h4>
+                    <p>{{ $settings->pweb }}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
+                <div class="service-block">
+                    <span class="icon"><i class="fa fa-cogs"></i></span>
+                    <h4 class="ho">Custom Support</h4>
+                    <p>{{ $settings->customs }}</p>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
-          <div class="service-block">
-            <span class="icon"><i class="fa fa-mobile"></i></span>
-            <h4 class="ho">Fully Responsive</h4>
-            <p>{{ $settings->frespon }} </p>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
-          <div class="service-block">
-            <span class="icon"><i class="fa fa-shopping-cart"></i></span>
-            <h4 class="ho">e-commerce site</h4>
-            <p>{{ $settings->ecom }}</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
-          <div class="service-block">
-            <span class="icon"><i class="fa fa-user-plus"></i></span>
-            <h4 class="ho">Personal Website</h4>
-            <p>{{ $settings->pweb }}</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
-          <div class="service-block">
-            <span class="icon"><i class="fa fa-cogs"></i></span>
-            <h4 class="ho">Custom Support</h4>
-            <p>{{ $settings->customs }}</p>
-          </div>
-        </div>
-      </div>
-
+        
     </div>
   </section>
 
@@ -321,14 +320,14 @@
   <!-- contact -->
   <section id="contact">
     <div class="container" id="cont">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1>Contact</h1>
-          <h3 class="section-subheading" style="text-align:center" id="make">Let's have a chat and build a worldclass web application & website.</h3>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Contact</h1>
+                <h3 class="section-subheading" style="text-align:center" id="make">Let's have a chat and build something worldclass website.</h3>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12">
 
           @if(Session::has('success'))
           <div class="alert alert-success">
@@ -345,8 +344,8 @@
                   <h4 class="section-heading">Email:</h4>
                   <p><b>info@wealthydeveloper.com.ng</b></p>
 
-                  <h4 class="section-heading"> <span class="icon"><a href="tel:08137489567"><i style="color: #00ff00;" class="fa fa-mobile colored fa-3x"></i></a></span> </h4>
-                  <p><b><a style="color:white" href="tel:08137489567">08137489567</a> </b> </p>
+                                <h4 class="section-heading"> <span class="icon"><i class="fa fa-mobile colored fa-3x"></i></span> </h4>
+                                <p><b>+2347086106891</b></p>
 
 
                   <h4 class="section-heading"> <span class="icon"><a href='https://wa.me/08137489567' target='_blank'><i style="color: #00ff00;" class="fa fa-whatsapp fa-3x"></i></a></span> </h4>
@@ -465,35 +464,34 @@
   <!-- contact -->
 
 
-  <!-- footer -->
-  <footer class="nb-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="about">
-
-            <div class="social-media">
-              <ul class="list-inline">
-                <li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://twitter.com/Styleid1" title=""><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://github.com/wealthydeveloper" title=""><i class="fa fa-github"></i></a></li>
-                <li><a href="https://www.instagram.com/wealthy_developer/" title=""><i class="fa fa-instagram"></i></a></li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
+<!-- footer -->
+<footer class="nb-footer">
+	<div class="container">
+	<div class="row">
+	<div class="col-sm-12">
+	<div class="about">
+	
+	<div class="social-media">
+		<ul class="list-inline">
+			<li><a href="https://twitter.com/Styleid1" title=""><i class="fa fa-twitter"></i></a></li>
+			<li><a href="https://github.com/wealthydeveloper" title=""><i class="fa fa-github"></i></a></li>
+			<li><a href="https://www.instagram.com/wealthy_developer/" title=""><i class="fa fa-instagram"></i></a></li>
+			<li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i class="fa fa-linkedin"></i></a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
 
 
       </div>
     </div>
 
-    <section class="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <p> &#169 WealthyDeveloper <?php echo date("Y"); ?></p>
-          </div>
+<section class="copyright">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<p>Copyright  &#169 Designs <?php echo date("Y");?>.</p>
+</div>
 
         </div>
       </div>

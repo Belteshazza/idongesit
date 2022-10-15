@@ -120,7 +120,7 @@ class ProfilesController extends Controller
          if (request('image')) {
             $imagePath = request('image')->store('profile', 'public');
 
-            $image = Image::make($request->file('image')->getRealPath());
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
             $image->save();
 
             $imageArray = ['image' => $imagePath];
@@ -134,7 +134,7 @@ class ProfilesController extends Controller
         if (request('image2')) {
             $imagePath = request('image2')->store('profile', 'public');
 
-            $image = Image::make($request->file('image2')->getRealPath());
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
             $image->save();
 
             $imageArray = ['image2' => $imagePath];

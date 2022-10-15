@@ -3,9 +3,9 @@
 
 @section('content')
 
-<div class="container-fluid card card-default ">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 card-body">
         </div>
 
         <div class="col-6 card-body">
@@ -21,7 +21,7 @@
 
             <div class="text-center" style="padding:25px max-width:150px"> <b>{{ $post->caption }} </b></div> 
          
-            <div class="text-center"><a href="{{ $post->url }}" style="text-decoration:none" >Click me to view the above website</a></div>
+            <div class="text-center"><a href="{{ $post->url }}">Click me to view the Above wesite</a></div>
          
             </div>
         
