@@ -27,9 +27,10 @@ class PostsController extends Controller
 
     public function index()
     {
-        return view('admin.posts.index')->with('posts', Post::all());
-                                        
-    } 
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        return view('admin.posts.index')->with('posts', $posts);
+    }
+
 
     /**
      * Show the form for creating a new resource.
