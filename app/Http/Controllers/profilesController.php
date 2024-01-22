@@ -25,9 +25,10 @@ class ProfilesController extends Controller
 
     public function index()
     {
-        return view('admin.profiles.index')->with('profile', Profile::all());
-                                        
-    } 
+        $profiles = Profile::orderBy('created_at', 'desc')->get();
+        return view('admin.profiles.index')->with('profile', $profiles);
+    }
+ 
 
     /**
      * Show the form for creating a new resource.

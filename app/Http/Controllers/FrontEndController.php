@@ -14,10 +14,13 @@ class FrontEndController extends Controller
 {
     public function index()
     {
-        return view('index')->with('posts', Post::all())
-                            ->with('settings', Setting::first())
-                            ->with('first_profiles', Profile::orderBy('created_at', 'asc')->first());
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        return view('index')->with('posts', $posts)
+            ->with('settings', Setting::first())
+            ->with('first_profiles', Profile::first());
     }
+
+
 
     public function show(\App\Models\Post $post)
     {
