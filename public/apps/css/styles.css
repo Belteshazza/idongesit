@@ -406,13 +406,13 @@ border-radius: 50%;
 background: transparent;
 border:3px solid transparent;
 								 }
-.content-section .thumbnail:hover:after { 
+/* .content-section .thumbnail:hover:after { 
 top: 25%; 
 opacity: 1;
 color: #FFFFFF;
 background: #f52b2b;
-border:3px solid #FFFFFF; 
-	}
+border:3px solid #ffffff; 
+	} */
 
 	/***********************************CONTACT STYLES***********************************/
 #contact{
