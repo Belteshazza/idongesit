@@ -3,40 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Contact; 
-use Mail;
+use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function getContact() { 
+  public function getContact()
+  {
 
-        return view('contact_us'); 
-      } 
- 
-    public function saveContact(Request $request) { 
- 
-         $this->validate($request, [
-             'name' => 'required',
-             'email' => ['required', 'email'],
-             'subject' => 'required',
-             'phone_number' => 'required',
-             'message' => 'required',
-             'captcha' => 'required|captcha'
+    return view('contact_us');
+  }
 
-             
-             ]);
+  public function saveContact(Request $request)
+  {
 
-             $contact = new Contact;
-     
-             $contact->name = $request->name;
-             $contact->email = $request->email;
-             $contact->subject = $request->subject;
-             $contact->phone_number = $request->phone_number;
-             $contact->message = $request->message;
-     
-             $contact->save();
+    $this->validate($request, [
+      'name' => 'required',
+      'email' => ['required', 'email'],
+      'subject' => 'required',
+      'phone_number' => 'required',
+      'message' => 'required',
+      'captcha' => 'required|captcha'
+      
+    ]);
 
-             \Mail::send('contact_email',
+    // $data = $request->all();
+      
+
+    // Mail::raw($data, function ($message) {
+    //   $message->to(config('mail.to.address'))
+    //   ->subject('New Contact Form Submission');
+    // });  
+
+
+     Mail::send('contact_email',
              array(
                  'name' => $request->get('name'),
                  'email' => $request->get('email'),
@@ -46,15 +46,15 @@ class ContactController extends Controller
              ), function($message) use ($request)
                {
                   $message->from($request->email);
-                  $message->to('info@wealthydeveloper.com.ng');
+                  $message->to(config('mail.to.address'));
                });
-             
-             return back()->with('success', 'Thank you for contacting us!');
-     
-         }
+  
 
-    public function reloadCaptcha()
-       {
-         return response()->json(['captcha' => captcha_img()]);
-       }
+    return back()->with('success', 'Thank you for contacting us!');
+  }
+
+  public function reloadCaptcha()
+  {
+    return response()->json(['captcha' => captcha_img()]);
+  }
 }
