@@ -4,23 +4,21 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description"
-        content="A freelance web developer, virtual reality developer, VR developer, Laravel, web application developer, online services, online marketing solutions, 
+    <meta name="description" content="A software enginner, virtual reality developer, VR developer, Laravel, web application developer, online services, online marketing solutions, 
     online presence, projects, portfolio, lets bring to your amazing applications to live." />
     <meta name="author" content="Idongesit">
-    <meta name="keywords"
-        content="Web developer Abuja, web application development Abuja, Nigeria, laravel developer, laravel developer in abuja nigeria, PHP developer, PHP developer in 
+    <meta name="keywords" content="Web developer Abuja, web application development Abuja, Nigeria, laravel developer, laravel developer in abuja nigeria, PHP developer, PHP developer in 
     Abuja Nigeria, virtual reality developer, virtual reality developer in abuja nigeria, web development companies in Abuja, Web designer companies in Abuja Nigeria, Web application developer Nigeria, Nigerian laravel developer, Nigerian     PHP developer web designer, web developer, websites, Idongesit, freelancers in Abuja Nigeria, freelance web development, Web developer freelance
     website portal development, Garki Abuja developers, Wuse Abuja developers, Apo Abuja developers, E-commerce website developers, web programmer, programming, virtual reality abuja , laravel developer,
     Abuja Nigeria" />
 
-    <meta property="og:title" content="Idongesit - Freelance Web developer in Abuja, Nigeria" />
-    <meta property="og:description" content="A freelance web application developer living in Abuja, Nigeria" />
+    <meta property="og:title" content="Idongesit - Software Enginner in Abuja, Nigeria" />
+    <meta property="og:description" content="software enginner living in Abuja, Nigeria" />
     <meta property="og:url" content="https://wealthydeveloper.com.ng" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Idongesit - Freelance Web developer in Abuja, Nigeria </title>
+    <title>Idongesit - Software Enginner in Abuja, Nigeria </title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" type="text/css" href="apps/bootstrap/css/bootstrap.css">
@@ -29,8 +27,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="apps/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet"
-        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="shortcut icon" href="favicon-96x96.png" type="image/x-icon">
 
     <!-- Theme CSS -->
@@ -79,26 +76,29 @@
 
                     <div class="social-profile">
                         <figure class="social-avatar">
-                            <img src="/developer/public/storage/{{ $first_profiles->image }}"
-                                class="img-responsive img-circle" alt="profile-picture" />
+                            @if($first_profiles)
+                            <img src="/developer/public/storage/{{ $first_profiles->image }}" class="img-responsive img-circle" alt="profile-picture" />
+
+                            @endif
+
+
                             <figcaption>
-                                <a target="_blank" href="https://twitter.com/Styleid1" class="s-twitter"><i
-                                        class="fa fa-twitter fa-fw"></i><span> his twitter </span></a>
-                                <a target="_blank" href="https://github.com/wealthydeveloper" class="s-github"><i
-                                        class="fa fa-github fa-fw"></i><span> his github </span></a>
-                                <a target="_blank" href="https://www.instagram.com/wealthy_developer/"
-                                    class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span> his instagram
+                            <a target="_blank" href="https://twitter.com/Styleid1" class="s-github"><i class="fa fa-twitter fa-fw"></i><span> his twitter </span></a>
+                                <a target="_blank" href="https://github.com/Bethesida" class="s-github"><i class="fa fa-github fa-fw"></i><span> his github </span></a>
+                                <a target="_blank" href="https://www.instagram.com/Betheside_" class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span> his instagram
                                     </span></a>
-                                <a target="_blank" href="https://ng.linkedin.com/in/idongesit-utong-186684169"
-                                    class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>his linkedin </span></a>
+                                <a target="_blank" href="https://ng.linkedin.com/in/idongesit-utong" class="s-twitter"><i class="fa fa-linkedin fa-fw"></i><span>his linkedin </span></a>
                             </figcaption>
                         </figure>
                     </div>
                     <div style="ground-color:rgba(71, 51, 51, 0.0)">
+                        @if($first_profiles)
                         <h2 class="intro-lead-in" style="padding-left:50px">{{ $first_profiles->title }}</h2>
+
                         <h3 class="intro-heading" style="padding-left:50px">
                             {{ $first_profiles->caption }}
                         </h3>
+                        @endif
                     </div>
                     <div class="col-md-3"> </div>
                 </div>
@@ -126,21 +126,27 @@
             <div class="col-sm-4 text-center">
                 <div class="desc">
                     <div class="icon-me"><i class="fa fa-user"></i></div>
+                    @if($settings)
                     <p>{{ $settings->about1 }}</p>
+                    @endif
                 </div>
             </div>
 
             <div class="col-sm-4 text-center">
                 <div class="desc">
                     <div class="icon-me"><i class="fa fa-mortar-board"></i></div>
+                    @if($settings)
                     <p>{{ $settings->about2 }}</p>
+                    @endif
                 </div>
             </div>
 
             <div class="col-sm-4 text-center">
                 <div class="desc">
                     <div class="icon-me"><i class="fa fa-rocket"></i></div>
+                    @if($settings)
                     <p>{{ $settings->about3 }}</p>
+                    @endif
                 </div>
             </div>
 
@@ -244,21 +250,28 @@
                     <div class="service-block">
                         <span class="icon"><i class="fa fa-code"></i></span>
                         <h4 class="ho">Web Development</h4>
+                        @if($settings)
                         <p>{{ $settings->wdev }}</p>
+                        @endif
+                       
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
                     <div class="service-block">
                         <span class="icon"><i class="fa fa-laptop"></i></span>
                         <h4 class="ho">Web Design</h4>
+                        @if($settings)
                         <p>{{ $settings->wdesign }}</b></p>
+                        @endif
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
                     <div class="service-block">
                         <span class="icon"><i class="fa fa-mobile"></i></span>
                         <h4 class="ho">Fully Responsive</h4>
+                        @if($settings)
                         <p>{{ $settings->frespon }} </p>
+                        @endif
                     </div>
                 </div>
 
@@ -266,21 +279,27 @@
                     <div class="service-block">
                         <span class="icon"><i class="fa fa-shopping-cart"></i></span>
                         <h4 class="ho">e-commerce site</h4>
+                        @if($settings)
                         <p>{{ $settings->ecom }}</p>
+                        @endif
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
                     <div class="service-block">
                         <span class="icon"><i class="fa fa-user-plus"></i></span>
                         <h4 class="ho">Personal Website</h4>
+                        @if($settings)
                         <p>{{ $settings->pweb }}</p>
+                        @endif
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
                     <div class="service-block">
                         <span class="icon"><i class="fa fa-cogs"></i></span>
                         <h4 class="ho">Custom Support</h4>
+                        @if($settings)
                         <p>{{ $settings->customs }}</p>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -302,19 +321,18 @@
                 </div>
 
                 @foreach ($posts as $post)
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                            <a href="{{ route('show', [$post->id]) }}">
-                                <img src="/storage/{{ $post->image }}" class="img-responsive" style="width:150px"
-                                    alt="Sliced WhatsApp web at first attempt">
-                                <div class="caption">
-                                    <p class="text-center">{{ $post->title }}</p>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a href="{{ route('show', [$post->id]) }}">
+                            <img src="/storage/{{ $post->image }}" class="img-responsive" style="width:150px" alt="Sliced WhatsApp web at first attempt">
+                            <div class="caption">
+                                <p class="text-center">{{ $post->title }}</p>
 
-                                </div>
-                            </a>
-                        </div>
-
+                            </div>
+                        </a>
                     </div>
+
+                </div>
                 @endforeach
 
 
@@ -339,9 +357,9 @@
                 <div class="col-lg-12">
 
                     @if (Session::has('success'))
-                        <div class="alert alert-success">
-                            {{ Session::get('success') }}
-                        </div>
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
                     @endif
 
                     <form method="POST" action="{{ route('contact') }}">
@@ -353,15 +371,11 @@
                                     <h4 class="section-heading">Email:</h4>
                                     <p><b>info@wealthydeveloper.com.ng</b></p>
 
-                                    <h4 class="section-heading"> <span class="icon"><i
-                                                class="fa fa-mobile colored fa-3x"></i></span> </h4>
+                                    <h4 class="section-heading"> <span class="icon"><i class="fa fa-mobile colored fa-3x"></i></span> </h4>
                                     <p><b>+2348137489567</b></p>
 
 
-                                    <h4 class="section-heading"> <span class="icon"><a
-                                                href='https://wa.me/08137489567' target='_blank'><i
-                                                    style="color: #00ff00;"
-                                                    class="fa fa-whatsapp fa-3x"></i></a></span> </h4>
+                                    <h4 class="section-heading"> <span class="icon"><a href='https://wa.me/08137489567' target='_blank'><i style="color: #00ff00;" class="fa fa-whatsapp fa-3x"></i></a></span> </h4>
                                     <a style="color:white" href='https://wa.me/08137489567' target='_blank'>
                                         <p><b>08137489567</b></p>
                                     </a>
@@ -374,26 +388,22 @@
                                         <div class="form-group">
                                             <label for="name"> I will like to know you:</label>
 
-                                            <input type="text"
-                                                class="form-control @error('name') is-invalid @enderror"
-                                                placeholder="Name" name="name" value="{{ old('name') }}">
+                                            <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Name" name="name" value="{{ old('name') }}">
                                             @error('name')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong class="text-danger">{{ $message }}</strong>
+                                            </span>
                                             @enderror
                                         </div>
 
                                         <div class="form-group">
                                             <label for="email">Email:</label>
 
-                                            <input type="text"
-                                                class="form-control @error('email') is-invalid @enderror"
-                                                placeholder="Email" name="email" value="{{ old('email') }}">
+                                            <input type="text" class="form-control @error('email') is-invalid @enderror" placeholder="Email" name="email" value="{{ old('email') }}">
                                             @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong class="text-danger">{{ $message }}</strong>
+                                            </span>
                                             @enderror
 
                                         </div>
@@ -405,27 +415,22 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="phone">Phone:</label>
-                                            <input type="text"
-                                                class="form-control @error('phone_number') is-invalid @enderror"
-                                                placeholder="Phone Number" name="phone_number"
-                                                value="{{ old('phone_number') }}">
+                                            <input type="text" class="form-control @error('phone_number') is-invalid @enderror" placeholder="Phone Number" name="phone_number" value="{{ old('phone_number') }}">
                                             @error('phone_number')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong class="text-danger">{{ $message }}</strong>
+                                            </span>
                                             @enderror
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="how">How did you found out about me:</label>
-                                            <input type="text"
-                                                class="form-control @error('subject') is-invalid @enderror"
-                                                placeholder="Subject" name="subject" value="{{ old('subject') }}">
+                                            <input type="text" class="form-control @error('subject') is-invalid @enderror" placeholder="Subject" name="subject" value="{{ old('subject') }}">
                                             @error('subject')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong class="text-danger">{{ $message }}</strong>
+                                            </span>
                                             @enderror
 
                                         </div>
@@ -435,38 +440,34 @@
                                     <div class="col-md-12 col-lg-12">
                                         <div class="form-group">
                                             <label for="message">Your messagee:</label>
-                                            <textarea class="form-control textarea @error('message') is-invalid @enderror" cols="5" rows="5"
-                                                placeholder="Message" name="message">{{ old('message') }} </textarea>
+                                            <textarea class="form-control textarea @error('message') is-invalid @enderror" cols="5" rows="5" placeholder="Message" name="message">{{ old('message') }} </textarea>
                                             @error('message')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong class="text-danger">{{ $message }}</strong>
+                                            </span>
                                             @enderror
                                         </div>
 
                                         <div class="form-group mt-4 mb-4">
                                             <div class="captcha">
                                                 <span>{!! captcha_img() !!}</span>
-                                                <button type="button" class="btn btn-danger" class="reload"
-                                                    id="reload">
+                                                <button type="button" class="btn btn-danger" class="reload" id="reload">
                                                     ↻
                                                 </button>
                                             </div>
                                         </div>
                                         <div class="form-group mb-4">
-                                            <input id="captcha" type="text" class="form-control"
-                                                placeholder="Enter Captcha" name="captcha">
+                                            <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
 
                                             @error('captcha')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong class="text-danger">{{ $message }}</strong>
+                                            </span>
                                             @enderror
 
                                         </div>
                                         <div class="form-group">
-                                            <input type="submit" value="Send Message"
-                                                class="btn btn-success btn-block" />
+                                            <input type="submit" value="Send Message" class="btn btn-success btn-block" />
 
                                         </div>
                     </form>
@@ -499,14 +500,10 @@
 
                         <div class="social-media">
                             <ul class="list-inline">
-                                <li><a href="https://twitter.com/Styleid1" title=""><i
-                                            class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://github.com/wealthydeveloper" title=""><i
-                                            class="fa fa-github"></i></a></li>
-                                <li><a href="https://www.instagram.com/wealthy_developer/" title=""><i
-                                            class="fa fa-instagram"></i></a></li>
-                                <li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i
-                                            class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://twitter.com/Styleid1" title=""><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/wealthydeveloper" title=""><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.instagram.com/wealthy_developer/" title=""><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -532,17 +529,17 @@
 
     <script src="{{ asset('js/main.js') }}"></script> --}}
 
-     <script type="text/javascript">
-    $('#reload').click(function() {
-      $.ajax({
-        type: 'GET',
-        url: 'reload-captcha',
-        success: function(data) {
-          $(".captcha span").html(data.captcha);
-        }
-      });
-    });
-  </script>
+    <script type="text/javascript">
+        $('#reload').click(function() {
+            $.ajax({
+                type: 'GET',
+                url: 'reload-captcha',
+                success: function(data) {
+                    $(".captcha span").html(data.captcha);
+                }
+            });
+        });
+    </script>
 
 </body>
 
