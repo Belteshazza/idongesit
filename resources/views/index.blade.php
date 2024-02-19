@@ -83,7 +83,7 @@
 
 
                             <figcaption>
-                            <a target="_blank" href="https://twitter.com/Styleid1" class="s-github"><i class="fa fa-twitter fa-fw"></i><span> his twitter </span></a>
+                                <a target="_blank" href="https://twitter.com/Styleid1" class="s-github"><i class="fa fa-twitter fa-fw"></i><span> his twitter </span></a>
                                 <a target="_blank" href="https://github.com/Bethesida" class="s-github"><i class="fa fa-github fa-fw"></i><span> his github </span></a>
                                 <a target="_blank" href="https://www.instagram.com/Betheside_" class="s-instagram"><i class="fa fa-instagram fa-fw"></i><span> his instagram
                                     </span></a>
@@ -253,7 +253,7 @@
                         @if($settings)
                         <p>{{ $settings->wdev }}</p>
                         @endif
-                       
+
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 hb vb">
@@ -501,9 +501,9 @@
                         <div class="social-media">
                             <ul class="list-inline">
                                 <li><a href="https://twitter.com/Styleid1" title=""><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://github.com/wealthydeveloper" title=""><i class="fa fa-github"></i></a></li>
-                                <li><a href="https://www.instagram.com/wealthy_developer/" title=""><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="https://ng.linkedin.com/in/idongesit-utong-186684169" title=""><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://github.com/Bethesida" title=""><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.instagram.com/Betheside_" title=""><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://ng.linkedin.com/in/idongesit-utong" title=""><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>
